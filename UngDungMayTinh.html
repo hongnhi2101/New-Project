@@ -8,12 +8,41 @@
 <h1>Caculator</h1>
 <form>
     <input type="number" id="number1" width="150"> <input type="number" id="number2" width="150"  ><br>
-    <button type="button" id="cong" onclick="tinhtoan()">Addition(+)</button> <button type="button" id="tru" onclick="tinhtoan()">Subtraction(-)</button> <button type="button" id="nhan" onclick="tinhtoan()">Mutilipcation(x)</button> <button type="button" id="chia" onclick="tinhtoan()">Division(/)</button>
-    <h2>Result:<span></span></h2>
+    <button type="button" id="cong" value="cong1" onclick="tinhtoan1()">Addition(+)</button> <button type="button" id="tru" value="tru1" onclick="tinhtoan2()">Subtraction(-)</button> <button type="button" id="nhan" value="nhan1" onclick="tinhtoan3()">Mutilipcation(x)</button> <button type="button" id="chia" value="chia1" onclick="tinhtoan4()">Division(/)</button>
+    <h2>Result: <span id="result"></span></h2>
 </form>
 <script>
-    function tinhtoan() {
-
+    function tinhtoan1() {
+let so1 = document.getElementById("number1").value;
+let nb1 = parseInt(so1);
+let so2 = document.getElementById("number2").value;
+let nb2 = parseInt(so2);
+        let result = nb1+ nb2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function tinhtoan2() {
+        let so1 = document.getElementById("number1").value;
+        let nb1 = parseInt(so1);
+        let so2 = document.getElementById("number2").value;
+        let nb2 = parseInt(so2);
+        let result = nb1- nb2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function tinhtoan3() {
+        let so1 = document.getElementById("number1").value;
+        let nb1 = parseInt(so1);
+        let so2 = document.getElementById("number2").value;
+        let nb2 = parseInt(so2);
+        let result = nb1* nb2;
+        document.getElementById('result').innerHTML = result;
+    }
+    function tinhtoan4() {
+        let so1 = document.getElementById("number1").value;
+        let nb1 = parseInt(so1);
+        let so2 = document.getElementById("number2").value;
+        let nb2 = parseInt(so2);
+        let result = nb1/ nb2;
+        document.getElementById('result').innerHTML = result;
     }
 </script>
 </body>

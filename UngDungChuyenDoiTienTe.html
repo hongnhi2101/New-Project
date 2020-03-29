@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungChuyenDoiTienTe</title>
+</head>
+<body>
+<form>
+    <style>
+        table.table1{
+            width: 950px;
+        }
+
+    </style>
+    <table class="table1">
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <tr>
+            <td align="center"><input type="number" name="value" id="number"></td>
+            <td align="center"><select id="select1">
+                <option name="donvi1" value="vnd1">VND</option>
+                <option name="donvi1" value="usd1">USD</option>
+            </select></td>
+            <td align="center"><select id="select2">
+                <option name="donvi2" value="vnd2">VND</option>
+                <option name="donvi2" value="usd2">USD</option>
+            </select>
+            </td>
+            <td align="center"><button type="button" onclick="chuyentien()" style="background-color: aqua">Convert</button> </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <p>Result: <span id="result1"></span> </p>
+
+</form>
+<script>
+    function chuyentien() {
+        let input = document.getElementById('number').value;
+        let money = parseInt(input);
+        let a = document.getElementById('select1').value;
+        let b = document.getElementById('select2').value;
+        let result;
+        if (a == "vnd1" && b == "usd2"){
+            result = money/23000;
+        } else {if ( a == "usd1" && b == "vnd2"){
+            result = money*23000;}
+         else {result = money; }}
+        document.getElementById("result1").innerHTML = result;
+        // 1USD = 23000VND
+    }
+</script>
+
+</body>
+</html>
