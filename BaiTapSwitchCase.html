@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTapSwitchCase</title>
+</head>
+<body>
+<form>
+    <input type="text" id="thang" ><br>
+    <button type="button"  onclick="tracuu();">Tính số ngày</button>
+    <div id="haha"></div>
+</form>
+<script>
+    function tracuu() {
+        let a = parseInt(document.getElementById('thang').value);
+        let b ="";
+        switch (a) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                b="Có 31 ngày";
+                break;
+            case 2:
+                b = "Có 28 or 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                b="Có 30 ngày";
+                break;
+        }
+    document.getElementById('haha').innerHTML = "Tháng"+" " + a +" " + b;
+    }
+</script>
+
+</body>
+</html>
