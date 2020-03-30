@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CauTrucIfElseIf</title>
+</head>
+<body>
+<script>
+    let name = prompt("Nhập tên từ bàn phím");
+    if (name == "Admin"){
+        let pass = prompt(" nhập mật khẩu");
+        if (pass == "TheMaster") {
+            alert("Wellcome");
+        } else if (pass == "null") {
+            alert("Canceld")
+        } else alert(" Wrong password");
+    } else if (name == "null") {
+        alert("Canceld");
+        } else alert(" I don't know you");
+</script>
+</body>
+</html>
