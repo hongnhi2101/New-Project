@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuKienChuot</title>
+</head>
+<body>
+<form>
+    <img src="quabong.png" id="bong" style="width: 300px">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="click" onclick="move();">Click Me
+</form>
+
+<script>
+    let imgOjb = null;
+    imgOjb = document.getElementById("bong");
+    function init() {
+        imgOjb = document.getElementById("bong");
+        imgOjb.style.position = 'relative';
+        imgOjb.style.left = '0px';
+    }
+    function move() {
+        imgOjb.style.left = parseInt(imgOjb.style.left) + 20 + 'px';
+    }
+
+
+    window.onload = init();
+</script>
+</body>
+</html>
