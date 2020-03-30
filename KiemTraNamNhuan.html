@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiemTraNamNhuan</title>
+</head>
+<body>
+<script>
+    let year = prompt("Input year: ");
+    let yearInt = parseInt(year);
+    let test = false;
+    let testBy4 = yearInt%4 == 0;
+    if (testBy4){
+        let testBy100 = yearInt%100 == 0;
+        if (testBy100) {
+            test = false;
+        } else test = true;
+    }
+    let testBy400 = yearInt%400 == 0;
+    if (testBy400) {
+        if (testBy100) {
+            test = true;
+        }
+    }
+    if (test == true) {alert("La Nam Nhuan");}
+    else alert("Khong phai la nam nhuan");
+
+</script>
+</body>
+</html>
