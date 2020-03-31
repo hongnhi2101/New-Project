@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+</head>
+<body>
+<h1>Do You Love Me?</h1>
+<form>
+    <input type="button" value="YES" onclick="alert('Anh Yeu Em')"> <input type="button" value="NO" id="no" onmouseover="chay()">
+</form>
+<script>
+    let a = null;
+    a = document.getElementById('no');
+    let b =0;
+    let c =0;
+    let width;
+    let height;
+    width = parseInt(window.innerWidth)- 100;
+    height = parseInt(window.innerHeight) - 100;
+    function load() {
+ let a = document.getElementById('no');
+    a.style.position = 'relative';
+    a.style.left = '0px';
+    a.style.top = '0px';
+
+    }
+    function chay() {
+        b = Math.floor(Math.random()*width);
+        c = Math.floor(Math.random()*height);
+
+        a.style.left =   b + "px";
+        a.style.top =  c + "px";
+    }
+    window.onload = load();
+</script>
+</body>
+</html>
