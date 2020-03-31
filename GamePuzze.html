@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>GamePuzze</title>
 </head>
 <body>
-$END$
+<form>
+    <img id="panda1" onclick="gau1();" src="puzze/tiger1.png" height="120" width="640"/>
+    <img id="panda2" onclick="gau2();" src="puzze/panda2.png" height="120" width="640"/>
+    <img id="panda3" onclick="gau3();" src="puzze/horse3.png" height="120" width="640"/>
+</form>
+<script>
+    function gau1() {
+        let a = document.getElementById('panda1');
+        if (a.src.match('panda1')) {
+            a.src = 'puzze/horse1.png';
+        } else if (a.src.match('tiger1')) {
+            a.src = 'puzze/panda1.png';
+        } else a.src = "puzze/tiger1.png";
+    }
+    function gau2() {
+        let a = document.getElementById('panda2');
+        if (a.src.match('panda2')) {
+            a.src = 'puzze/horse2.png';
+        } else if (a.src.match('tiger2')) {
+            a.src = 'puzze/panda2.png';
+        } else a.src = "puzze/tiger2.png";
+    }
+    function gau3() {
+        let a = document.getElementById('panda3');
+        if (a.src.match('panda3')) {
+            a.src = 'puzze/horse3.png';
+        } else if (a.src.match('tiger3')) {
+            a.src = 'puzze/panda3.png';
+        } else a.src = "puzze/tiger3.png";
+    }
+
+</script>
 </body>
 </html>
