@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuDungVongLapLongNhau</title>
+</head>
+<body>
+<!--    <script>-->
+<!--        let i;-->
+<!--        let j;-->
+<!--        let sout;-->
+<!--        sout  = "<table border='1' cellspacing='0' width='300'>";-->
+<!--        for (i=1; i<=10; i++) {-->
+<!--            sout +="<tr>"; for (j =1;j <=10;j++){-->
+<!--                sout+= "<td>"+i*j+"</td>";-->
+<!--            } sout +="</tr>";-->
+<!--        } sout+="</table>";-->
+<!--        document.write(sout);-->
+<!--    </script>-->
+    <script>
+        let i = 1;
+        let j = 1;
+        let sout = "<table cellspacing='0' border='1' width='300'>"
+        while (i<=10){
+            sout+= "<tr>";
+            while (j<=10){
+                sout += "<td>" + i*j+ "</td>";j++;
+            } sout+= "</tr>";  i++; j=1;
+        } sout+= "</table>";
+        document.write(sout);
+    </script>
+</body>
+</html>
