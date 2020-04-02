@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>GoodCheapFast</title>
+    <style type="text/css">
+        .toggle {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+        .toggle input[type=checkbox]{
+            display: none;
+        }
+        .toggle .slider{
+            background-color: #ccc;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            transition: .4s;
+            position: relative;
+            border-radius: 50px;
+        }
+        .toggle .slider:before {
+            background-color:#fff;
+            bottom:4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 26px;
+            border-radius: 50px;
+        }
+        .toggle  input[type='checkbox']:checked +.slider {
+            background-color: #ff9244;
+        }
+        .toggle input[type="checkbox"]:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
 </head>
 <body>
-$END$
+<form>
+    <label class="toggle" for="toggle">
+        <input type="checkbox" id="toggle" onclick="good()">
+        <div class="slider"></div>GOOD
+    </label><br>
+    <label class="toggle" for="toggle1">
+        <input type="checkbox" id="toggle1" onclick="fast()">
+        <div class="slider"></div>FAST
+    </label><br>
+    <label class="toggle" for="toggle2">
+        <input type="checkbox" id="toggle2" onclick="cheap()">
+        <div class="slider"></div>CHEAP
+    </label>
+</form>
+<script>
+           let good1 = document.getElementById('toggle');
+           let fast1 = document.getElementById('toggle1');
+           let cheap1 = document.getElementById('toggle2');
+           good1.checked = false;
+           cheap1.checked = false;
+           fast1.checked = false;
+           function good() {
+               if (fast1.checked && cheap1.checked) {
+                   cheap1.checked = false;
+               }
+           }
+           function fast() {
+               if ( cheap1.checked && good1.checked) {
+                  good1.checked = false;
+               }
+           }
+            function cheap() {
+                if (good1.checked && cheap1.checked) {
+                    fast1.checked = false;
+                }
+            }
+
+</script>
+
+</div>
 </body>
 </html>
