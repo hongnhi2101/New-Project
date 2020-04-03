@@ -10,32 +10,61 @@
     <img id="panda2" onclick="gau2();" src="puzze/panda2.png" height="120" width="640"/>
     <img id="panda3" onclick="gau3();" src="puzze/horse3.png" height="120" width="640"/>
 </form>
+<h2 id="demo"></h2>
 <script>
+    let a = null;
+    let b = null;
+    let c = null;
+    a =document.getElementById('panda1');
+    b = document.getElementById('panda2');
+    c = document.getElementById('panda3');
+    let a1=""; let a2=""; let a3="";
     function gau1() {
-        let a = document.getElementById('panda1');
+       a = document.getElementById('panda1');
         if (a.src.match('panda1')) {
             a.src = 'puzze/horse1.png';
         } else if (a.src.match('tiger1')) {
             a.src = 'puzze/panda1.png';
         } else a.src = "puzze/tiger1.png";
+        a1= a.src.substring(50,55);
+        b1= b.src.substring(50,55);
+        c1= c.src.substring(50,55);
+        if (a1==b1 && a1 == c1){ document.getElementById('demo').innerText ="Chúc mừng bạn"}
+        else document.getElementById('demo').innerText ="Chúc bạn may mắn lần sau"
     }
     function gau2() {
-        let a = document.getElementById('panda2');
-        if (a.src.match('panda2')) {
-            a.src = 'puzze/horse2.png';
-        } else if (a.src.match('tiger2')) {
-            a.src = 'puzze/panda2.png';
-        } else a.src = "puzze/tiger2.png";
+        b = document.getElementById('panda2');
+        if (b.src.match('panda2')) {
+            b.src = 'puzze/horse2.png';
+        } else if (b.src.match('tiger2')) {
+            b.src = 'puzze/panda2.png';
+        } else b.src = "puzze/tiger2.png";
+        a1= a.src.substring(50,55);
+        b1= b.src.substring(50,55);
+        c1= c.src.substring(50,55);
+        if (a1==b1 && a1 == c1){ document.getElementById('demo').innerText ="Chúc mừng bạn"}
+        else document.getElementById('demo').innerText ="Chúc bạn may mắn lần sau"
     }
     function gau3() {
-        let a = document.getElementById('panda3');
-        if (a.src.match('panda3')) {
-            a.src = 'puzze/horse3.png';
-        } else if (a.src.match('tiger3')) {
-            a.src = 'puzze/panda3.png';
-        } else a.src = "puzze/tiger3.png";
-    }
 
+       c = document.getElementById('panda3');
+        if (c.src.match('panda3')) {
+            c.src = 'puzze/horse3.png';
+        } else if (c.src.match('tiger3')) {
+            c.src = 'puzze/panda3.png';
+        } else c.src = "puzze/tiger3.png";
+        a1= a.src.substring(50,55);
+        b1= b.src.substring(50,55);
+        c1= c.src.substring(50,55);
+        if (a1==b1 && a1 == c1){ document.getElementById('demo').innerText ="Chúc mừng bạn"}
+        else document.getElementById('demo').innerText ="Chúc bạn may mắn lần sau"
+    }
+    // a1= a.src.substring(50,55);
+    // b1= b.src.substring(50,55);
+    // c1= c.src.substring(50,55);
+    // if (a1==b1 && a1==c1) {
+    //     alert('Chuc Mung Ban');
+    // }
 </script>
 </body>
 </html>
